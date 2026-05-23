@@ -1,103 +1,238 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Tablet — 1200px and below */
+@media screen and (max-width: 1200px) {
+  .section {
+    padding: 80px 40px;
   }
-  .about-containers {
-    flex-wrap: wrap;
+
+  .hero {
+    padding-left: 40px;
+    padding-right: 40px;
   }
-  #contact,
-  #projects {
-    height: fit-content;
+
+  .hero__name {
+    font-size: 52px;
+  }
+
+  .hero__subtitle {
+    font-size: 19px;
+  }
+
+  .section__title {
+    font-size: 36px;
+  }
+
+  .hero__metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding: 32px 40px;
   }
 }
 
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
+/* Large mobile / small tablet — 768px and below */
+@media screen and (max-width: 768px) {
+  /* Nav: switch to hamburger */
+  .nav__links {
     display: none;
   }
-  #hamburger-nav {
+
+  .nav__hamburger {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
+
+  .nav__mobile-overlay {
+    display: flex;
   }
-  #profile,
-  .section-container {
-    display: block;
+
+  .nav__inner {
+    padding: 0 20px;
   }
-  .arrow {
-    display: none;
+
+  /* Hero */
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
   }
-  section,
-  .section-container {
-    height: fit-content;
+
+  .hero__name {
+    font-size: 40px;
   }
-  section {
-    margin: 0 5%;
+
+  .hero__subtitle {
+    font-size: 17px;
+    margin-bottom: 36px;
   }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+
+  .hero__tagline {
+    font-size: 11px;
   }
-  .about-containers {
-    margin-top: 0;
+
+  .hero__metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .metric-badge {
+    padding: 20px 16px;
+  }
+
+  .metric-badge__number {
+    font-size: 24px;
+  }
+
+  .metric-badge__label {
+    font-size: 9px;
+  }
+
+  .hero__ctas {
+    flex-wrap: wrap;
+  }
+
+  /* Sections */
+  .section {
+    padding: 60px 20px;
+  }
+
+  .section__title {
+    font-size: 30px;
+    margin-bottom: 36px;
+  }
+
+  /* About */
+  .about__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .about__card {
+    padding: 20px 16px;
+  }
+
+  /* Timeline */
+  .timeline {
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline__dot {
+    left: -28px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .timeline__company {
+    font-size: 18px;
+  }
+
+  .timeline__client {
+    font-size: 14px;
+  }
+
+  /* Skills */
+  .skills__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Projects */
+  .project-card {
+    padding: 28px 24px;
+  }
+
+  /* Contact */
+  .contact__links {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 24px 20px;
   }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+/* Small mobile — 480px and below (covers 375px) */
+@media screen and (max-width: 480px) {
+  .hero__name {
+    font-size: 32px;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+
+  .hero__subtitle {
+    font-size: 15px;
   }
-  article {
-    font-size: 1rem;
+
+  .hero__metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
+
+  .metric-badge {
+    padding: 16px 12px;
   }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
+
+  .metric-badge__number {
+    font-size: 22px;
   }
-  .contact-info-container {
-    margin: 0;
+
+  .section__title {
+    font-size: 26px;
+    margin-bottom: 28px;
   }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
+
+  .about__cards {
+    grid-template-columns: 1fr;
   }
-  .experience-sub-title {
-    font-size: 1.25rem;
+
+  .skills__grid {
+    grid-template-columns: 1fr;
   }
-  .logo {
-    font-size: 1.5rem;
+
+  .timeline__entry {
+    margin-bottom: 40px;
   }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+
+  .timeline__bullets li {
+    font-size: 13px;
+  }
+
+  .project-card__title {
+    font-size: 20px;
+  }
+
+  .project-card__desc {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 13px;
+    width: 100%;
     text-align: center;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+
+  .project-card__actions {
+    flex-direction: column;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
+
+  .hero__ctas {
+    flex-direction: column;
   }
 }

@@ -1,47 +1,89 @@
+/* ============================================
+   Portfolio Interactions
+   ============================================ */
+
+// ---- Hamburger Menu ----
 function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
+  var icon = document.getElementById('hamburger-icon');
+  var overlay = document.getElementById('mobile-overlay');
+  icon.classList.toggle('open');
+  overlay.classList.toggle('open');
+
+  // Update aria-expanded for accessibility
+  var isOpen = overlay.classList.contains('open');
+  icon.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+  // Prevent body scroll when menu is open
+  if (isOpen) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
 }
 
-// Adding zoom image on click for work experience
+// ---- Sticky Nav Scroll Listener ----
+(function () {
+  var nav = document.getElementById('nav');
 
-// Get the modal
-var modal = document.getElementById("myModal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function () {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  modalImg.alt = this.alt;
-  captionText.innerHTML = this.alt;
-};
-// When the user clicks on <span> (x), close the modal
-modal.onclick = function () {
-  img01.className += " out";
-  setTimeout(function () {
-    modal.style.display = "none";
-    img01.className = "modal-content";
-  }, 400);
-};
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 80) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }, { passive: true });
+})();
 
-var modal1 = document.getElementById("myModal1");
-var img1 = document.getElementById("myImg1");
-var modalImg1 = document.getElementById("img02");
-var captionText1 = document.getElementById("caption1");
-img1.onclick = function () {
-  modal1.style.display = "block";
-  modalImg1.src = this.src;
-  modalImg1.alt = this.alt;
-  captionText1.innerHTML = this.alt;
-};
-modal1.onclick = function () {
-  img02.className += " out";
-  setTimeout(function () {
-    modal1.style.display = "none";
-    img02.className = "modal-content";
-  }, 400);
-};
+// ---- Smooth Scroll for Nav Links (with nav offset) ----
+(function () {
+  var NAV_HEIGHT = 80;
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      var target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.pageYOffset - NAV_HEIGHT;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        // Update URL hash without triggering scroll
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
+})();
+
+// ---- Intersection Observer for Fade-In ----
+(function () {
+  var faders = document.querySelectorAll('.fade-in');
+  if (!faders.length) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  faders.forEach(function (el) {
+    observer.observe(el);
+  });
+})();
+
+// ---- Card Glow Effect (mouse tracking) ----
+(function () {
+  var cards = document.querySelectorAll('.about__card, .skills__group, .project-card');
+  cards.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var rect = card.getBoundingClientRect();
+      card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+      card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+    });
+  });
+})();

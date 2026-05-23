@@ -2,500 +2,355 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
-    <title>Arihant's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arihant Kumar Jain | Senior Engineer, Agentic AI & Distributed Systems</title>
+    <meta name="description" content="Portfolio of Arihant Kumar Jain, a Senior Engineer building production AI systems and distributed architectures at scale. 7+ years, 99% latency reductions, solo-built AI product." />
+    <link rel="canonical" href="https://arihant-tech.info/" />
+    <meta property="og:title" content="Arihant Kumar Jain | Senior Engineer" />
+    <meta property="og:description" content="Senior Engineer building production AI systems and distributed architectures at scale. 7+ years, 99% latency reductions, solo-built AI product." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arihant-tech.info/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Arihant Kumar Jain | Senior Engineer" />
+    <meta name="twitter:description" content="Senior Engineer building production AI systems and distributed architectures at scale." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Arihant Jain</div>
-      <div>
-        <ul class="nav-links">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <div class="nav__logo">AKJ.DEV</div>
+        <ul class="nav__links" id="desktop-nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="nav__hamburger" id="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-overlay" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Arihant Jain</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
+
+    <!-- Mobile overlay -->
+    <nav class="nav__mobile-overlay" id="mobile-overlay" aria-label="Mobile navigation">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#experience" onclick="toggleMenu()">Experience</a>
+      <a href="#skills" onclick="toggleMenu()">Skills</a>
+      <a href="#projects" onclick="toggleMenu()">Projects</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic-2.png" alt="Arihant Jain profile picture" />
+
+    <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <p class="hero__tagline">// AVAILABLE FOR PRINCIPAL &amp; FDE ROLES</p>
+      <h1 class="hero__name">Arihant Kumar Jain</h1>
+      <p class="hero__subtitle">
+        Senior Engineer specializing in <span class="highlight-purple">Agentic AI</span> and Distributed Systems at Scale
+      </p>
+
+      <div class="hero__metrics">
+        <div class="metric-badge">
+          <span class="metric-badge__number">99%</span>
+          <span class="metric-badge__label">Latency Reduction</span>
+          <span class="metric-badge__detail">12s → 40ms</span>
+        </div>
+        <div class="metric-badge">
+          <span class="metric-badge__number">~99%</span>
+          <span class="metric-badge__label">Onboarding Effort</span>
+          <span class="metric-badge__detail">3 weeks → 10 min</span>
+        </div>
+        <div class="metric-badge">
+          <span class="metric-badge__number">7+</span>
+          <span class="metric-badge__label">Years Building<br />Production Systems</span>
+        </div>
+        <div class="metric-badge">
+          <span class="metric-badge__number">1</span>
+          <span class="metric-badge__label">Solo-Built<br />Live AI Product</span>
+        </div>
       </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Arihant Jain</h1>
-        <p class="section__text__p2">Backend Microservices Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-arihant.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./index.html#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/arihant-jain-ai/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/techwizAJ'"
-          />
-        </div>
+
+      <div class="hero__ctas">
+        <a href="./assets/resume-arihant.pdf" target="_blank" class="btn btn--primary" id="download-cv-btn">Download CV</a>
+        <a href="#contact" class="btn btn--outline" id="contact-cta-btn">Contact Info</a>
+      </div>
+
+      <div class="hero__socials">
+        <a href="https://www.linkedin.com/in/arihant-jain-ai/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" id="linkedin-social">
+          <img src="./assets/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/techwizAJ" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" id="github-social">
+          <img src="./assets/github.png" alt="GitHub" />
+        </a>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <!-- <div class="section__pic-container">
-          <img
-            src="./assets/profile-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div> -->
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>5+ years <br />Backend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Tech. in Computer Science and Engineering<br />SRM University</p>
-            </div>
-          </div>
-          <div class="text-container">
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="fade-in">
+        <p class="section__label">// About</p>
+        <h2 class="section__title">About Me</h2>
+        <div class="about__grid">
+          <div class="about__text">
             <p>
-              Starting my career as software engineer, I developed interest and enthusiastically learning more about scaling distributed applications and Microservices. My specialties include quickly learning new skills, programming languages, frameworks, design principles, problem solving and debugging complex issues is oddly satisfying.<br/>
-              I love to explore new technologies and develop new projects to gain experience on how they work. Also, I like helping and collaborating with like minded people which gives me immense joy.
+              I build systems where <strong>performance is the product</strong>, with API latencies measured in milliseconds,
+              onboarding workflows compressed from weeks to minutes, and intelligent pipelines that automate complex financial operations.
+              I specialize in designing and optimizing high-performance <strong>Multi-Agent Workflows</strong>, <strong>RAG pipelines</strong>, and
+              aggregated database networks that synthesize multi-repository codebases, complex architectures, and distributed system logs.
+            </p>
+            <p>
+              My current chapter is at Morgan Stanley via Wissen Technology, where I lead the engineering of multi-level agent workflows
+              and multi-repo knowledge aggregation systems to perform automated <strong>recon break analysis</strong> at institutional scale. By integrating
+              heterogeneous data sources, these systems compress high-overhead operations from 2 weeks down to mere minutes.
+            </p>
+            <p>
+              Beyond enterprise finance, I built <strong>BoardroomIQ AI</strong> solo and end-to-end, creating a live, multi-agent strategy simulator with
+              multi-persona boardroom arenas (CFO, Bear, Bull, Activist), deep RAG-based context parsing, and dynamic performance skill tracking.
+              This hands-on experience in building, scaling, and <em>reducing the complexity and overhead</em> of multi-agent systems is what I bring to Forward Deployed Engineer roles.
             </p>
           </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Work Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/TCS.png"
-                alt="TCS"
-                class="project-img"
-                id="myImg"
-              />
-              <div id="myModal" class="modal">
-                <img class="modal-content" id="img01">
-             <div id="caption"></div>
-             </div>
+          <div class="about__cards">
+            <div class="about__card">
+              <span class="about__card-icon">⚡</span>
+              <p class="about__card-title">Experience</p>
+              <p class="about__card-value">7+ Years</p>
+              <p class="about__card-detail">Production Systems</p>
             </div>
-            <h2 class="experience-sub-title project-title">TCS</h2>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/highradius-1.png"
-                alt="Highradius"
-                class="project-img"
-                id="myImg1"
-              />
-              <div id="myModal1" class="modal">
-                <img class="modal-content" id="img02">
-              <div id="caption1"></div>
-             </div>
+            <div class="about__card">
+              <span class="about__card-icon">🎓</span>
+              <p class="about__card-title">Education</p>
+              <p class="about__card-value">B.Tech CSE</p>
+              <p class="about__card-detail">SRM University</p>
             </div>
-            <h2 class="experience-sub-title project-title">Highradius</h2>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="skills">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Languages , Database and ORM</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React JS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySql</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MongoDB</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Spring Data JPA</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Hibernate</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
+            <div class="about__card">
+              <span class="about__card-icon">🏦</span>
+              <p class="about__card-title">Current</p>
+              <p class="about__card-value">Wissen Technology</p>
+              <p class="about__card-detail">Morgan Stanley</p>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frameworks and Tools</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Spring Boot</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Spring</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Postman</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Apache Jmeter</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Maven</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Docker</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Kubernetes</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>AWS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Azure</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
+            <div class="about__card">
+              <span class="about__card-icon">🚀</span>
+              <p class="about__card-title">Shipped</p>
+              <p class="about__card-value">BoardroomIQ AI</p>
+              <p class="about__card-detail">Live product</p>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/treasuryApp.png"
-                alt="Treasury Application"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Treasury Application</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/techwizAJ/TreasuryApplication'"
-              >
-                Github
-              </button>
-              <!-- <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button> -->
-            </div>
+
+    <!-- ===== WORK EXPERIENCE ===== -->
+    <section class="section" id="experience">
+      <div class="fade-in">
+        <p class="section__label">// Experience</p>
+        <h2 class="section__title">Work Experience</h2>
+        <div class="timeline">
+          <!-- Wissen / Morgan Stanley -->
+          <div class="timeline__entry">
+            <div class="timeline__dot timeline__dot--cyan"></div>
+            <p class="timeline__date">JUN 2025 to PRESENT</p>
+            <h3 class="timeline__company">Wissen Technology <span class="timeline__client">· Morgan Stanley</span></h3>
+            <p class="timeline__role">Senior Software Engineer</p>
+            <ul class="timeline__bullets">
+              <li>Architected and built an <strong>Agentic Flow Accelerator Platform</strong> leveraging multi-agent orchestration, workflow automation, and context-aware decisions to automate end-to-end market onboarding (agent accounts, depositories, legal entities, trade scoping), dynamically generating PRs and Liquibase migration scripts and reducing onboarding time from <span class="metric">3 weeks → ~10 minutes</span> (<span class="metric">~99% efficiency gain</span>)</li>
+              <li>Developed an AI-powered <strong>Agentic Reconciliation Intelligence System</strong> utilizing multi-agent orchestration, cross-system context engineering, and retrieval-augmented analysis (aggregating logs, databases, and knowledge graphs of distributed repositories across mainframe & cloud), enabling automated break detection, root-cause analysis, and business insight generation, reducing trade reconciliation effort from <span class="metric">weeks → minutes</span></li>
+              <li>Designed and implemented a global market scoping platform to migrate from agent-account & legal-entity based rules to a market-driven architecture, significantly reducing rule explosion and simplifying onboarding across regions</li>
+              <li>Designed highly available settlement systems across Asia markets using distributed architecture, ensuring fault tolerance, data consistency, and scalability across various financial flows processing <span class="metric">millions of trades daily</span></li>
+            </ul>
           </div>
-          <!--
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Twitter Using Microservices</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
+
+          <!-- TCS / Ericsson -->
+          <div class="timeline__entry">
+            <div class="timeline__dot timeline__dot--purple"></div>
+            <p class="timeline__date">APR 2022 to JUN 2025</p>
+            <h3 class="timeline__company">TCS <span class="timeline__client">· Ericsson</span></h3>
+            <p class="timeline__role">Systems Engineer</p>
+            <ul class="timeline__bullets">
+              <li>Reduced API latency from <span class="metric">12s → 40ms</span> (~99%) using a cache-aside strategy with eventual consistency (MongoDB + Kafka)</li>
+              <li>Designed high-throughput **event-driven architecture** using Kafka with partitioning and horizontal scaling for asynchronous processing</li>
+              <li>Developed **non-blocking asynchronous APIs** and led migration to highly available, fault-tolerant microservices</li>
+              <li>Implemented secure Azure AD authentication and system resilience patterns (circuit breaker, retry, bulkhead)</li>
+            </ul>
           </div>
-          -->
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:arihantjainn04@gmail.com">arihantjainn04@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/arihant-jain-ai/">LinkedIn</a></p>
+
+          <!-- HighRadius -->
+          <div class="timeline__entry">
+            <div class="timeline__dot timeline__dot--gold"></div>
+            <p class="timeline__date">JAN 2019 to MAR 2022</p>
+            <h3 class="timeline__company">HighRadius Technologies</h3>
+            <p class="timeline__role">Growth Path: Intern → Associate SDE → TC → Technical Consultant</p>
+            <ul class="timeline__bullets">
+              <li>Drove automation from <span class="metric">20% → 80%</span> via configurable rule-engine framework</li>
+              <li>Built BAI2/MT940 high-volume payment file processing pipeline</li>
+              <li>Mentored <span class="metric">10+ engineers</span>, established observability framework</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-    <footer>
-      <!-- <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section" id="skills">
+      <div class="fade-in">
+        <p class="section__label">// Skills</p>
+        <h2 class="section__title">Technical Skills</h2>
+        <div class="skills__grid">
+          <div class="skills__group">
+            <h3 class="skills__group-title">Architecture</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">Microservices</span>
+              <span class="skills__tag">Distributed Systems</span>
+              <span class="skills__tag">Event-Driven</span>
+              <span class="skills__tag">System Design</span>
+              <span class="skills__tag">Eventual Consistency</span>
+              <span class="skills__tag">Saga Patterns</span>
+            </div>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__group-title skills__group-title--ai">AI &amp; Agentic</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">Multi-Agent Workflows</span>
+              <span class="skills__tag">Agentic Workflows</span>
+              <span class="skills__tag">RAG Pipelines</span>
+              <span class="skills__tag">Knowledge Aggregation</span>
+              <span class="skills__tag">LangGraph</span>
+              <span class="skills__tag">Knowledge Graphs</span>
+              <span class="skills__tag">Claude / LLMs</span>
+              <span class="skills__tag">Prompt Engineering</span>
+            </div>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__group-title">Languages &amp; Frameworks</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">Java</span>
+              <span class="skills__tag">Python</span>
+              <span class="skills__tag">Node.js</span>
+              <span class="skills__tag">C++</span>
+              <span class="skills__tag">Spring Boot</span>
+              <span class="skills__tag">Spring Cloud</span>
+              <span class="skills__tag">Spring Security</span>
+            </div>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__group-title">Data &amp; Messaging</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">Kafka</span>
+              <span class="skills__tag">MongoDB</span>
+              <span class="skills__tag">MySQL</span>
+              <span class="skills__tag">Elasticsearch</span>
+              <span class="skills__tag">Azure Service Bus</span>
+              <span class="skills__tag">Redis</span>
+            </div>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__group-title">Cloud &amp; DevOps</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">AWS</span>
+              <span class="skills__tag">Azure</span>
+              <span class="skills__tag">Docker</span>
+              <span class="skills__tag">Kubernetes</span>
+              <span class="skills__tag">Terraform</span>
+              <span class="skills__tag">GitHub Actions</span>
+            </div>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__group-title">Practices</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">Idempotency</span>
+              <span class="skills__tag">Circuit Breaker</span>
+              <span class="skills__tag">Caching Strategy</span>
+              <span class="skills__tag">Observability</span>
+              <span class="skills__tag">DDD</span>
+            </div>
+          </div>
         </div>
-      </nav> -->
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <div class="fade-in">
+        <p class="section__label">// Projects</p>
+        <h2 class="section__title">Projects</h2>
+        <div class="projects__grid">
+          <!-- BoardroomIQ AI — Featured -->
+          <div class="project-card project-card--featured" id="project-boardroomiq">
+            <p class="project-card__tag project-card__tag--ai">// SOLO-BUILT AI PRODUCT</p>
+            <h3 class="project-card__title">BoardroomIQ AI</h3>
+            <p class="project-card__desc">
+              The AI strategy gym. It features 34 real MBA cases as live AI dialogues with Professor Mode, a multi-persona Boardroom Arena (CFO, Bear, Bull, Activist), and a Crisis Room simulator. Skill tracking is integrated across 8 dimensions, built solo end-to-end with Claude and agentic development workflows.
+            </p>
+            <div class="project-card__stack">
+              <span class="project-card__stack-tag">Agentic Workflows</span>
+              <span class="project-card__stack-tag">Claude API</span>
+              <span class="project-card__stack-tag">LangGraph</span>
+              <span class="project-card__stack-tag">Node.js</span>
+              <span class="project-card__stack-tag">Multi-persona AI</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="https://boardroomiq-ai.com" target="_blank" rel="noopener noreferrer" class="btn btn--primary" id="boardroomiq-demo-btn">Live Demo</a>
+            </div>
+          </div>
+
+          <!-- Treasury Application -->
+          <div class="project-card project-card--secondary" id="project-treasury">
+            <p class="project-card__tag project-card__tag--infra">// FINANCIAL INFRASTRUCTURE</p>
+            <h3 class="project-card__title">Treasury Application</h3>
+            <p class="project-card__desc">
+              Real-time financial visibility and reporting platform across multiple regions.
+              End-to-end treasury management with transaction processing, reconciliation,
+              and comprehensive reporting dashboards.
+            </p>
+            <div class="project-card__stack">
+              <span class="project-card__stack-tag">Java</span>
+              <span class="project-card__stack-tag">Spring Boot</span>
+              <span class="project-card__stack-tag">MySQL</span>
+              <span class="project-card__stack-tag">REST APIs</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="https://github.com/techwizAJ/TreasuryApplication" target="_blank" rel="noopener noreferrer" class="btn btn--outline" id="treasury-github-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="fade-in">
+        <p class="section__label">// Contact</p>
+        <h2 class="section__title">Get In Touch</h2>
+        <p class="contact__intro">
+          Open to Principal Engineer and Forward Deployed Engineer opportunities.
+          Reach out via email or LinkedIn.
+        </p>
+        <div class="contact__links">
+          <a href="mailto:arihantjainn04@gmail.com" class="contact__link" id="contact-email">
+            <img src="./assets/email.png" alt="Email" class="contact__link-icon" />
+            <span class="contact__link-text">arihantjainn04@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/arihant-jain-ai/" target="_blank" rel="noopener noreferrer" class="contact__link" id="contact-linkedin">
+            <img src="./assets/linkedin.png" alt="LinkedIn" class="contact__link-icon" />
+            <span class="contact__link-text">linkedin.com/in/arihant-jain-ai</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p class="footer__text">Arihant Kumar Jain · arihant-tech.info · Built with intent.</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
