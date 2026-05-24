@@ -21,14 +21,14 @@ High-performance **Senior / Staff Software Engineer (L6 equivalent)** with **7+ 
 
 ### **PROFESSIONAL EXPERIENCE**
 
-#### **WISSEN TECHNOLOGY | Client: MORGAN STANLEY** | Mumbai, India
+#### **WISSEN TECHNOLOGY | Client: MORGAN STANLEY** | Banglore, India
 *Senior Software Engineer* | *June 2025 – Present*
 * **Agentic Flow Accelerator Platform:** Architected and deployed an enterprise-grade meta-orchestration platform utilizing autonomous multi-agent networks (via LangGraph and custom semantic state trees) to automate institutional-grade market onboarding (legal entities, depositories, agent accounts). Built event-driven compilation engines that dynamically generate schema migrations (Liquibase) and pull requests, compressing the onboarding pipeline from **3 weeks to ~10 minutes (a 99.9% operational efficiency gain)** with zero schema drift.
 * **Agentic Reconciliation Intelligence System:** Engineered a distributed data-aggregation and log-analysis engine to index heterogeneous, multi-system database and legacy mainframe ledger streams (processing billions of events). Integrated a custom RAG pipeline and dynamic Knowledge Graphs into a hierarchical, multi-agent diagnostic framework. Automated break detection and root-cause analysis, compressing cross-border trade desk investigations from **weeks to <5 minutes**.
 * **Global Market Scoping Engine:** Redesigned Morgan Stanley’s legacy trade-scoping rules system, migrating from a brittle, rules-based structure prone to validation failures to a market-driven policy matrix. Reduced overall rule-base complexity by **85%**, eliminating edge cases that previously exposed the firm to millions in transactional settlement risk.
 * **High-Availability Settlement Pipelines:** Led the distributed systems design for the Asia-Pacific trade settlement infrastructure, safely processing **1.5M+ transactions daily ($10B+ transactional volume)**. Implemented distributed transactional consensus, Saga orchestration patterns, and idempotent ingestion filters to guarantee strict 'exactly-once' processing under extreme market volatility.
 
-#### **TATA CONSULTANCY SERVICES (TCS) | Client: ERICSSON** | Pune, India
+#### **TATA CONSULTANCY SERVICES (TCS) | Client: ERICSSON** | Chennai, India
 *Systems Engineer* | *April 2022 – June 2025*
 * **Core Microservice Refactoring & Latency Optimization:** Spearheaded the architectural redesign of a highly degraded core telecommunications provisioning microservice. Replaced synchronous, blocking HTTP polling with a high-throughput, event-driven data ingestion pipeline using **Apache Kafka** and a distributed **Redis cache-aside topology**. Slashed **p99 latency by 99.6% (from 12 seconds to 40 milliseconds)** while enforcing strict eventual consistency models between MongoDB and relational datastores.
 * **High-Throughput Messaging & Scaling:** Designed and deployed a highly scalable, partitioned event-driven messaging backbone using Kafka, configured with custom partitioners, consumer group scaling, and backpressure handling. Achieved throughput scaling of **100k+ RPS** during peak telemetry traffic bursts without message loss.

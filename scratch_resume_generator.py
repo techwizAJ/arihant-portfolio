@@ -222,7 +222,7 @@ def create_resume():
         ("WISSEN TECHNOLOGY", True, False),
         (" | Client: ", False, False),
         ("MORGAN STANLEY", True, False),
-        (" | Mumbai, India", False, False)
+        (" | Banglore, India", False, False)
     ]
     add_header_with_tabs(wissen_left, "June 2025 – Present")
     add_role_paragraph("Senior Software Engineer")
@@ -244,7 +244,7 @@ def create_resume():
         ("TATA CONSULTANCY SERVICES (TCS)", True, False),
         (" | Client: ", False, False),
         ("ERICSSON", True, False),
-        (" | Pune, India", False, False)
+        (" | Chennai, India", False, False)
     ]
     add_header_with_tabs(tcs_left, "April 2022 – June 2025")
     add_role_paragraph("Systems Engineer")
