@@ -55,6 +55,10 @@
   }
 
   .nav__mobile-overlay {
+    display: none;
+  }
+
+  .nav__mobile-overlay.open {
     display: flex;
   }
 

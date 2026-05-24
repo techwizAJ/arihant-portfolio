@@ -186,6 +186,7 @@ img {
 }
 
 .nav__mobile-overlay.open {
+  display: flex;
   opacity: 1;
   pointer-events: auto;
 }
