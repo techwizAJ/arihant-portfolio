@@ -214,3 +214,85 @@ function toggleMenu() {
   startMonitoring();
 })();
 
+// ---- Unified Skill-Experience Highlighting ----
+(function () {
+  var tags = document.querySelectorAll('.skills__tag');
+  var entries = document.querySelectorAll('.timeline__entry, .project-card');
+  var clickedSkill = null;
+
+  function getSkillsList(el) {
+    var attr = el.getAttribute('data-skills');
+    if (!attr) return [];
+    return attr.split(',').map(function (s) { return s.trim().toLowerCase(); });
+  }
+
+  function applyHighlight(skillName) {
+    var skillLower = skillName.toLowerCase();
+    entries.forEach(function (entry) {
+      var skills = getSkillsList(entry);
+      // Check for exact or substring match
+      var match = skills.some(function (s) {
+        return s === skillLower || s.indexOf(skillLower) !== -1 || skillLower.indexOf(s) !== -1;
+      });
+
+      if (match) {
+        entry.classList.add('highlighted');
+        entry.classList.remove('dimmed');
+      } else {
+        entry.classList.add('dimmed');
+        entry.classList.remove('highlighted');
+      }
+    });
+  }
+
+  function clearHighlight() {
+    entries.forEach(function (entry) {
+      entry.classList.remove('highlighted', 'dimmed');
+    });
+  }
+
+  tags.forEach(function (tag) {
+    var skillName = tag.textContent.trim();
+
+    tag.addEventListener('mouseenter', function () {
+      if (!clickedSkill) {
+        applyHighlight(skillName);
+      }
+    });
+
+    tag.addEventListener('mouseleave', function () {
+      if (!clickedSkill) {
+        clearHighlight();
+      }
+    });
+
+    tag.addEventListener('click', function (e) {
+      e.stopPropagation(); // Prevent document click listener from firing
+
+      if (clickedSkill === skillName) {
+        // Toggle off
+        clickedSkill = null;
+        tag.classList.remove('skills__tag--active');
+        clearHighlight();
+      } else {
+        // Clear previous active tag
+        tags.forEach(function (t) { t.classList.remove('skills__tag--active'); });
+        
+        // Toggle on
+        clickedSkill = skillName;
+        tag.classList.add('skills__tag--active');
+        applyHighlight(skillName);
+      }
+    });
+  });
+
+  // Reset highlight when clicking anywhere else
+  document.addEventListener('click', function (e) {
+    if (clickedSkill) {
+      clickedSkill = null;
+      tags.forEach(function (t) { t.classList.remove('skills__tag--active'); });
+      clearHighlight();
+    }
+  });
+})();
+

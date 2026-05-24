@@ -641,12 +641,42 @@ section {
   border-radius: 6px;
   padding: 6px 12px;
   transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
 }
 
-.skills__tag:hover {
+.skills__tag:hover,
+.skills__tag.skills__tag--active {
   border-color: var(--accent);
   color: var(--accent);
   background: rgba(0, 212, 255, 0.05);
+}
+
+.skills__tag.skills__tag--active {
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.25);
+}
+
+/* Unified Skill-Experience Highlighting */
+.timeline__entry,
+.project-card {
+  transition: opacity 0.4s ease, filter 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.timeline__entry.dimmed,
+.project-card.dimmed {
+  opacity: 0.4;
+  filter: grayscale(100%);
+}
+
+.timeline__entry.highlighted .timeline__dot {
+  transform: scale(1.2);
+  box-shadow: 0 0 16px var(--accent);
+}
+
+.project-card.highlighted {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
+  transform: translateY(-2px);
 }
 
 /* ============================================================
