@@ -54,6 +54,10 @@
     display: flex;
   }
 
+  .nav__search-kbd {
+    display: none;
+  }
+
   .nav__mobile-overlay {
     display: none;
   }
