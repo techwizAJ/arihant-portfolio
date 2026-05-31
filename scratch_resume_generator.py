@@ -168,12 +168,12 @@ def create_resume():
     p_summary.paragraph_format.line_spacing = 1.1
     
     summary_text = (
-        "High-performance Senior / Staff Software Engineer (L6 equivalent) with 7+ years of hands-on experience "
-        "architecting, scaling, and securing distributed ledger, transactional, and next-generation AI platforms. "
-        "Recognized expert in optimizing p99 latency in ultra-high throughput environments, resolving complex distributed "
-        "state challenges, and integrating autonomous multi-agent workflows as high-scale system capabilities. Proven track "
-        "record of spearheading zero-downtime microservice migrations, designing resilient transactional workflows ($10B+ daily volume), "
-        "and cutting operational latency by up to 99%. Expert in Java/Spring ecosystem, Kafka event-driven backbones, caching topologies, "
+        "Senior Software Engineer with 7+ years of hands-on experience "
+        "developing and scaling distributed ledger, transactional, and AI platforms. "
+        "Experienced in optimizing p99 latency in high throughput environments, resolving distributed "
+        "state challenges, and integrating multi-agent workflows. Proven track "
+        "record of supporting zero-downtime microservice migrations, contributing to resilient high volume transactional workflows, "
+        "and cutting operational latency. Strong background in Java/Spring ecosystem, Kafka event-driven backbones, caching topologies, "
         "and robust system-level consistency models."
     )
     r_sum = p_summary.add_run(summary_text)
@@ -228,16 +228,16 @@ def create_resume():
     add_role_paragraph("Senior Software Engineer")
     
     add_bullet_point("Agentic Flow Accelerator Platform: ", 
-                     "Architected and deployed an enterprise-grade meta-orchestration platform utilizing autonomous multi-agent networks (via LangGraph and custom semantic state trees) to automate institutional-grade market onboarding (legal entities, depositories, agent accounts). Built event-driven compilation engines that dynamically generate schema migrations (Liquibase) and pull requests, compressing the onboarding pipeline from 3 weeks to ~10 minutes (a 99.9% operational efficiency gain) with zero schema drift.")
+                     "Owned the development of a meta-orchestration platform utilizing autonomous multi-agent workflows to automate market onboarding (legal entities, depositories, agent accounts). Built event-driven compilation engines that dynamically generate schema migrations (Liquibase) and pull requests, compressing the onboarding pipeline from 3 weeks to ~10 minutes with zero schema drift.")
     
     add_bullet_point("Agentic Reconciliation Intelligence System: ", 
-                     "Engineered a distributed data-aggregation and log-analysis engine to index heterogeneous, multi-system database and legacy mainframe ledger streams (processing billions of events). Integrated a custom RAG pipeline and dynamic Knowledge Graphs into a hierarchical, multi-agent diagnostic framework. Automated break detection and root-cause analysis, compressing cross-border trade desk investigations from weeks to <5 minutes.")
+                     "Implemented a distributed data-aggregation and log-analysis engine to index multi-system database and legacy mainframe ledger streams (processing high-volume events). Integrated a RAG pipeline and Knowledge Graphs into a multi-agent diagnostic framework. Automated break detection and root-cause analysis, compressing cross-border trade desk investigations from weeks to <5 minutes.")
     
     add_bullet_point("Global Market Scoping Engine: ", 
-                     "Redesigned Morgan Stanley’s legacy trade-scoping rules system, migrating from a brittle, rules-based structure prone to validation failures to a market-driven policy matrix. Reduced overall rule-base complexity by 85%, eliminating edge cases that previously exposed the firm to millions in transactional settlement risk.")
+                     "Led the migration of Morgan Stanley’s legacy trade-scoping rules system to a market-driven rules. Reduced overall rule-base complexity by 85%, improving the system's reliability and reducing transactional settlement risk.")
     
     add_bullet_point("High-Availability Settlement Pipelines: ", 
-                     "Led the distributed systems design for the Asia-Pacific trade settlement infrastructure, safely processing 1.5M+ transactions daily ($10B+ transactional volume). Implemented distributed transactional consensus, Saga orchestration patterns, and idempotent ingestion filters to guarantee strict 'exactly-once' processing under extreme market volatility.")
+                     "Owned the settlements core, settlements adapter and Trade Capture Interface for the Asia-Pacific trade settlement infrastructure, safely processing 1.5M+ transactions daily. Implemented saga coordinator, distributed transactional consensus, and idempotent ingestion filters.")
 
     # 2. TATA CONSULTANCY SERVICES (TCS)
     tcs_left = [
@@ -250,13 +250,13 @@ def create_resume():
     add_role_paragraph("Systems Engineer")
     
     add_bullet_point("Core Microservice Refactoring & Latency Optimization: ", 
-                     "Spearheaded the architectural redesign of a highly degraded core telecommunications provisioning microservice. Replaced synchronous, blocking HTTP polling with a high-throughput, event-driven data ingestion pipeline using Apache Kafka and a distributed Redis cache-aside topology. Slashed p99 latency by 99.6% (from 12 seconds to 40 milliseconds) while enforcing strict eventual consistency models between MongoDB and relational datastores.")
+                     "Led migration of a core telecommunications provisioning microservice to an event-driven architecture. Replaced synchronous HTTP polling with a high-throughput data ingestion pipeline using Apache Kafka and a distributed Redis cache-aside topology. Slashed p99 latency from 12 seconds to 40 milliseconds while enforcing eventual consistency models between MongoDB and relational data stores.")
     
     add_bullet_point("High-Throughput Messaging & Scaling: ", 
-                     "Designed and deployed a highly scalable, partitioned event-driven messaging backbone using Kafka, configured with custom partitioners, consumer group scaling, and backpressure handling. Achieved throughput scaling of 100k+ RPS during peak telemetry traffic bursts without message loss.")
+                     "Designed Kafka event schema and deployed a partitioned messaging backbone using Kafka, configured with custom partitioners, consumer group scaling, and backpressure handling. Supported throughput scaling of 100k+ RPS during peak telemetry traffic bursts without message loss.")
     
     add_bullet_point("Asynchronous Execution & Concurrency: ", 
-                     "Re-engineered legacy synchronous APIs into non-blocking, reactive asynchronous streams (using Spring WebFlux/CompletableFuture), improving concurrent connection handling by 5x under peak telecommunication workloads.")
+                     "Migrated legacy synchronous APIs into non-blocking, reactive asynchronous streams (using Spring WebFlux/CompletableFuture), improving concurrent connection handling by 5x under peak telecommunication workloads.")
     
     add_bullet_point("Fault Isolation & Resilience: ", 
                      "Implemented system resilience patterns utilizing Resilience4j (Circuit Breakers, Bulkheads, and Rate Limiters) to prevent cascading failures across downstream provisioning networks. Integrated Azure Active Directory (AD) with OIDC/OAuth 2.0 and Spring Security to enforce enterprise-grade API security.")
@@ -273,13 +273,12 @@ def create_resume():
                      "Promoted 4 times within a 3-year tenure, progressing from Software Development Intern to Technical Consultant: Technical Consultant (Oct 2021 – Mar 2022) \u2022 Associate Technical Consultant (Jul 2020 – Nov 2021) \u2022 Associate Software Engineer (May 2019 – Jun 2020) \u2022 Software Development Intern (Jan 2019 – Apr 2019).")
     
     add_bullet_point("Configurable Rule-Engine Framework: ", 
-                     "Architected and built a highly configurable, high-performance rule-engine framework to parse and match incoming accounts receivable data. Elevated straight-through payment reconciliation automation from 20% to 80% for Fortune 500 enterprise clients, reducing manual accounts-receivable aging cycles by 70%.")
+                     "Built a configurable rule-engine framework to parse and match incoming accounts receivable data. Elevated straight-through payment reconciliation automation from 20% to 80% for enterprise clients, reducing manual accounts-receivable aging cycles by 70%.")
     
     add_bullet_point("Financial File Ingestion Pipeline: ", 
-                     "Engineered a robust, high-volume financial parsing and ingestion pipeline supporting standard global banking formats (BAI2 and MT940). Designed streaming parsers that processed 500MB+ banking statement files containing millions of transactions with strict transactional isolation and duplicate detection (idempotent ledger writes).")
+                     "Implemented a high-volume financial parsing and ingestion pipeline supporting standard global banking formats (BAI2 and MT940). Developed streaming parsers that processed 500MB+ banking statement files with transactional isolation and duplicate detection.")
     
-    add_bullet_point("Distributed Observability & Performance Tuning: ", 
-                     "Designed and established an enterprise-wide observability framework integrating distributed tracing (ELK Stack, Prometheus, Zipkin) and structured logging. Enabled proactive performance bottleneck identification, reducing mean-time-to-detection (MTTD) of anomalies from 4 hours to under 5 minutes across multi-tenant SaaS environments.")
+
     
     add_bullet_point("Technical Leadership: ", 
                      "Mentored a cross-functional team of 10+ junior software engineers, standardizing code quality metrics, CI/CD automated test suites (JUnit/Mockito), and robust system design best practices.")
@@ -342,7 +341,7 @@ def create_resume():
     srm_left = [
         ("SRM University, Chennai", True, False),
         (" — ", False, False),
-        ("Bachelor of Technology (B.Tech.) in Computer Science and Engineering", False, True),
+        ("Bachelor of Technology in Computer Science and Engineering", False, True),
         (" (2019)", False, False)
     ]
     add_education_item(srm_left, "Performance: 85.09% (Distinction)")
